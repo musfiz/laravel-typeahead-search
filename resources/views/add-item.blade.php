@@ -56,7 +56,7 @@
 	        return $.get(path, { query: query }, function (data) {	        	
 	                return process(data);
 	            });
-	        }
+	        },
 	        afterSelect: function (data) {
 		      //print the id to developer tool's console
 		      // console.log(data.id);
