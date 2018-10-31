@@ -1,7 +1,14 @@
 @extends('welcome')
 @section('content')
 <style>
-
+	.dropdown-menu>.active>a,
+	.dropdown-menu>.active>a:focus, 
+	.dropdown-menu>.active>a:hover {
+	    color: #fff;
+	    text-decoration: none;
+	    background-color: #17a2b8;
+	    outline: 0;
+	}
 </style>
 <div class="row mb-2 item">
 	<div class="col-md-12">
@@ -52,6 +59,9 @@
 	$(function(){
 		var path = "{{ route('district.search') }}";
 	    $('#search-input').typeahead({
+	    	selectOnBlur: true,
+	    	changeInputOnMove:true,
+	    	changeInputOnSelect:true,
 	        source:  function (query, process) {
 	        return $.get(path, { query: query }, function (data) {	        	
 	                return process(data);
