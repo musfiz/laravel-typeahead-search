@@ -14,7 +14,7 @@
     border-bottom: 1px solid #e5e5e5;
   }
 
-  .blog-header-logo {
+  .header-logo {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif;
     font-size: 2.25rem;
   }
@@ -27,18 +27,18 @@
 </head>
 <body>
   <div class="container">
-    <header class="blog-header py-3">
+    <header class="header py-3">
       <div class="row text-center">         
         <div class="col-12 text-center">
-          <a class="blog-header-logo text-dark" href="#">Laravel Typeahead Autocomplete Search</a>
+          <a class="header-logo text-dark" href="#">Laravel Typeahead Autocomplete Search</a>
         </div>        
       </div>
     </header>
 
     <div class="nav-scroller py-1 mb-2">
       <nav class="nav">
-        <a class="p-2 text-muted" href="{{url('/')}}">Add Item</a>      
-        <a class="p-2 text-muted" href="{{url('list')}}">View List</a>
+        <a class="p-2 text-muted" href="{{url('/')}}">Add District</a>      
+        <a class="p-2 text-muted" href="{{url('list')}}">View District</a>
       </nav>
     </div>
     @yield('content')

@@ -17,7 +17,7 @@
 				<div class="row">
 					<div class="form-group col-md-6">						
 						<input id="search-input" class="form-control form-control-sm" type="text"
-						 name="item_name" value="" data-id="" autocomplete="off" placeholder="Search Item">					
+						 name="item_name" value="" data-id="" autocomplete="off" placeholder="Search District Name">					
 					</div>
 					<div class="form-grou col-md-6">
 						<button id="add_district" class="btn btn-success btn-sm">Add District</button>
@@ -58,10 +58,7 @@
 <script type="text/javascript">
 	$(function(){
 		var path = "{{ route('district.search') }}";
-	    $('#search-input').typeahead({
-	    	selectOnBlur: true,
-	    	changeInputOnMove:true,
-	    	changeInputOnSelect:true,
+	    $('#search-input').typeahead({	    		    	
 	        source:  function (query, process) {
 	        return $.get(path, { query: query }, function (data) {	        	
 	                return process(data);
